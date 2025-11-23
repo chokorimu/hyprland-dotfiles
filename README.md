@@ -1,13 +1,12 @@
-dotfiles in purpose of hyprland ricing
+dotfiles in purpose of hyprland wm ricing
 
 dependencies: git
+
 to install:
 # Arch
 sudo pacman -S git
 # Debian/Ubuntu/Mint
 sudo apt install git
-# Fedora
-sudo rpm install git
 
 installation steps:
 1. open terminal
