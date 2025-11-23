@@ -8,6 +8,7 @@ sudo pacman -S git
 sudo apt install git
 # Fedora
 sudo rpm install git
+
 installation steps:
 1. open terminal
 2. cd && git clone https://github.com/chokorimu/hyprland-dotfiles.git
