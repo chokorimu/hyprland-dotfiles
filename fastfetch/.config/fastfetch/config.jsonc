@@ -51,8 +51,8 @@
     "size": {
       "maxPrefix": "YB",
       "binaryPrefix": "iec",
-      "ndigits": 2,
-      "spaceBeforeUnit": "default"
+      "ndigits": 1,
+      "spaceBeforeUnit": "never"
     },
     "temp": {
       "unit": "D",
@@ -65,7 +65,7 @@
       "spaceBeforeUnit": "default"
     },
     "percent": {
-      "type": 9,
+      "type": 0,
       "ndigits": 0,
       "color": {
         "green": "32",
@@ -104,7 +104,7 @@
     },
     "freq": {
       "ndigits": 2,
-      "spaceBeforeUnit": "default"
+      "spaceBeforeUnit": "never"
     },
     "constants": []
   },
@@ -118,67 +118,75 @@
   "modules": [
     {
       "type": "title",
-      "key": " ",
+      "key": "  ",
       "keyIcon": "",
       "fqdn": false,
       "color": {
         "user": "white",
         "at": "yellow",
-        "host": "magenta"
+        "host": "blue"
       }
-    },
-	{
-      "type": "separator",
-      "string": "",
-      "outputColor": "",
-      "times": 1
     },
     {
       "type": "separator",
-      "string": " ————————————————————————————————————————————————",
+      "string": " ——————————————————————————————————————",
       "outputColor": "",
       "times": 1
     },
     {
       "type": "os",
-      "key": "OS",
-      "keyIcon": " └"
+      "key": "os",
+      "keyIcon": " └",
+      "format": "{name} {arch}"
     },
     {
       "type": "kernel",
-      "key": "Kernel",
+      "key": "kernel",
       "keyIcon": " └"
     },
     {
+      "type": "command",
+      "key": "os age", 
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+    },
+    {
+      "type": "disk",
+      "key": "os age2",
+      "format": "{days}d {hours}h {minutes}m", 
+    },
+    {
       "type": "uptime",
-      "key": "Uptime",
-      "keyIcon": " └"
+      "key": "uptime",
+      "keyIcon": " └",
+      "format": "{hours}h {minutes}m"
     },
     {
       "type": "shell",
-      "key": "Shell",
-      "keyIcon": " └"
+      "key": "shell",
+      "keyIcon": " └",
+      "format": ""
     },
     {
       "type": "de",
-      "key": "DE",
+      "key": "de",
       "keyIcon": " └",
       "slowVersionDetection": false
     },
     {
       "type": "wm",
-      "key": "WM",
+      "key": "wm",
       "keyIcon": " └",
-      "detectPlugin": false
+      "detectPlugin": false,
+      "format": "{process-name}"
     },
     {
       "type": "wmtheme",
-      "key": "WM Theme",
+      "key": "wm theme",
       "keyIcon": " └󰓸"
     },
     {
       "type": "separator",
-      "string": "——————————————————————————————————————————————————",
+      "string": " ———————————————————————————————————————",
       "outputColor": "",
       "times": 1
     },
@@ -190,63 +198,68 @@
     },
     {
       "type": "separator",
-      "string": " ————————————————————————————————————————————————",
+      "string": " ——————————————————————————————————————",
       "outputColor": "",
       "times": 1
     },
     {
       "type": "cpu",
-      "key": "CPU",
+      "key": "cpu",
       "keyIcon": " └",
       "temp": false,
-      "showPeCoreCount": false
+      "showPeCoreCount": false,
+      "format": "{name}, {freq-max}"
     },
     {
       "type": "gpu",
-      "key": "GPU",
+      "key": "gpu",
       "keyIcon": " └󰾲",
       "driverSpecific": false,
       "detectionMethod": "pci",
       "temp": false,
-      "hideType": "none",
+      "hideType": "integrated",
       "percent": {
         "green": 50,
         "yellow": 80,
         "type": 0
-      }
+      },
+      "format": "{name}"
     },
     {
       "type": "display",
-      "key": "Display",
+      "key": "display",
       "keyIcon": " └󰍹",
       "compactType": "none",
       "preciseRefreshRate": false,
-      "order": null
+      "order": null,
+      "format": "{width}x{height} {inch}\", {refresh-rate}Hz"
     },
     {
       "type": "memory",
-      "key": "Memory",
+      "key": "memory",
       "keyIcon": " └",
       "percent": {
         "green": 50,
         "yellow": 80,
         "type": 0
-      }
+      },
+      "format": "{used} / {total}"
     },
     {
       "type": "swap",
-      "key": "Swap",
+      "key": "swap",
       "percent": {
         "green": 50,
         "yellow": 80,
         "type": 0
       },
       "keyIcon": " └󰓡",
-      "separate": false
+      "separate": false,
+      "format": "{used} / {total}"
     },
     {
       "type": "disk",
-      "key": "Disk",
+      "key": "disk",
       "keyIcon": " └",
       "showRegular": true,
       "showExternal": true,
@@ -262,11 +275,12 @@
         "green": 50,
         "yellow": 80,
         "type": 0
-      }
+      },
+      "format": "{size-used} / {size-total}, {filesystem}"
     },
-    {
+    /* {
       "type": "battery",
-      "key": "Battery",
+      "key": "battery",
       "keyIcon": " └",
       "temp": false,
       "percent": {
@@ -274,14 +288,14 @@
         "yellow": 20,
         "type": 0
       }
-    },
+    }, */
     {
       "type": "poweradapter",
       "keyIcon": " └󰚥"
     },
     {
       "type": "separator",
-      "string": "——————————————————————————————————————————————————",
+      "string": " ———————————————————————————————————————",
       "outputColor": "",
       "times": 1
     },
