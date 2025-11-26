@@ -1,6 +1,7 @@
 {
     "layer": "top",
     "modules-left": [
+        "image#album-art",
         "hyprland/workspaces",
         "hyprland/window",
         "hyprland/mode"
@@ -9,6 +10,7 @@
         "clock"
     ],
     "modules-right": [
+        "tray",
         "network",
         "pulseaudio",
         "battery"],
@@ -55,6 +57,23 @@
     "hyprland/window": {
         "format": "{initialTitle}",
         "separate-outputs": true
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10,
+        "icons": {
+            "discord": "~/hypr-dotfiles/waybar/icons/discord.jpg",
+            "blueman": "bluetooth",
+            "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        }
+    },
+
+    "image#album-art": {
+        "path": "/home/chokorimu/hypr-dotfiles/waybar/.config/waybar/icons/arch-linux.png",
+        "size": 28,
+        "interval": 5,
+        "on-click": "mpc toggle"
     },
 
     "pulseaudio": {
