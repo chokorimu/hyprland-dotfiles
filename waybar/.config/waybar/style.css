@@ -1,13 +1,13 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "0xProto Nerd Font", mononoki, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "0xProto Nerd Font Propo", mononoki, Roboto, Helvetica, Arial, sans-serif;
     font-size: 22px;
     min-height: 0px;
 }
 
 window#waybar {
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 255);
     /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/ 
     color: rgb(255, 255, 255);
 }
@@ -20,20 +20,52 @@ tooltip label {
   color: white;
 }
 
-#workspaces button {
+/* #workspaces button {
     margin: 2px 0px 8px 12px;
     padding: 2px 10px;
     border-radius: 20px;
     background-color: rgb(36, 36,36);
-    color: rgb(72, 72, 72);
-    /* border-bottom: 3px solid transparent; */
+    color: rgb(0, 0, 0);
 }
 
 #workspaces button.active {
-    background-color: #4e4e4e;
-    color: white;
+    background-color: #ababab;
+    color: rgb(0, 0, 0);
     padding: 0px 38px;
-    /* border-bottom: 3px solid white; */
+} */
+
+#workspaces button {
+    margin: 0px 0px 8px 0px;
+    padding: 2px 16px;
+    background-color: rgb(36, 36,36);
+    color: rgb(0, 0, 0);
+}
+
+#workspaces button:nth-child(1){
+    margin: 0px 0px 8px 12px;
+    padding: 2px 16px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: rgb(36, 36,36);
+    color: rgb(0, 0, 0);
+}
+
+#workspaces button:last-child{
+    margin: 0px 0px 8px 0px;
+    padding: 2px 16px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: rgb(36, 36,36);
+    color: rgb(0, 0, 0);
+}
+
+#workspaces button.active {
+    background-color: #ababab;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    padding: 0px 42px;
+}
+
+#image {
+    margin: 0px 0px 0px 12px;
 }
 
 #window {
@@ -41,15 +73,17 @@ tooltip label {
 }
 
 #clock {
+/*     border-left: 500px solid #000000;
+    border-right: 500px solid #000000; */
+    margin-top: 0px;
     padding: 2px 18px;
     border-radius: 20px;
     background-color: rgb(0, 0, 0);
 }
 
 #battery, #network, #pulseaudio {
-    border: 2px solid #000000;
     margin: 0px 12px 8px 0px;
-    padding: 2px 18px 2px 0px;
+    padding: 2px 8px;
     border-radius: 20px;
     background-color: rgb(0, 0, 0);
 }
@@ -84,31 +118,31 @@ tooltip label {
 #pulseaudio.level-5,
 #pulseaudio.level-10,
 #pulseaudio.level-15 { 
-    background-color: #000000;
+    background-color: #5e5e5e;
 }
 
 #pulseaudio.level-20,
 #pulseaudio.level-25,
 #pulseaudio.level-30 { 
-    background-color: #131313;
+    background-color: #6e6e6e;
 }
 
 #pulseaudio.level-35,
 #pulseaudio.level-40,
 #pulseaudio.level-45 { 
-    background-color: #212121;
+    background-color: #7e7e7e;
 }
 
 #pulseaudio.level-50,
 #pulseaudio.level-55,
 #pulseaudio.level-60 { 
-    background-color: #292929;
+    background-color: #8e8e8e;
 }
 
 #pulseaudio.level-65,
 #pulseaudio.level-70,
 #pulseaudio.level-75 { 
-    background-color: #313131;
+    background-color: #9e9e9e;
 }
 
 #pulseaudio.level-80,
@@ -116,7 +150,7 @@ tooltip label {
 #pulseaudio.level-90,
 #pulseaudio.level-95,
 #pulseaudio.level-100 { 
-    background-color: #363636;
+    background-color: #aeaeae;
 }
 
 #pulseaudio.level-5 { padding-right: 10px; }
