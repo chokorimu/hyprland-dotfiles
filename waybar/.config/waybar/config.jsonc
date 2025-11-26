@@ -2,92 +2,115 @@
     "layer": "top",
     "modules-left": [
         "hyprland/workspaces",
+        "hyprland/window",
         "hyprland/mode"
         ],
     "modules-center": [
-        "hyprland/window"
+        "clock"
     ],
     "modules-right": [
-        "pulseaudio",
-        "pulseaudio/slider",
         "network",
-        "battery",
-        "clock"],
+        "pulseaudio",
+        "battery"],
 
     "hyprland/window": {
         "max-length": 50
     },
 
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{timeTo}, {capacity}%"
     },
 
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+        "format": "{:%a, %b %d, %H:%M}"
     },
 
     "hyprland/workspaces": {
-    "format": "{name}",
-    "on-click": "activate",
-    "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "urgent": "",
-        "active": "",
-        "default": ""
+        "format": "{name}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "active": "",
+            "default": ""
         },
-    "sort-by-number": true
+        "sort-by-number": true
     },
-    "ext/workspacses": {
-    "persistent-workspaces": {
-        "3": [], // Always show a workspace with name '3', on all outputs if it does not exists
-        "4": ["eDP-1"], // Always show a workspace with name '4', on output 'eDP-1' if it does not exists
-        "5": ["eDP-1", "DP-2"] // Always show a workspace with name '5', on outputs 'eDP-1' and 'DP-2' if it does not exists
-        },
+
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": []
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{initialTitle}",
+        "separate-outputs": true
     },
 
     "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon}",
-    "format-muted": "",
-    "format-icons": {
-        "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
-        "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
-        "headphone": "",
-        "hands-free": "",
-        "headset": "",
-        "phone": "",
-        "phone-muted": "",
-        "portable": "",
-        "car": "",
-        "default": ["", ""]
-    },
-    "scroll-step": 1,
-    "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"]
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        "format-muted": "",
+        "states": {
+            "level-5": 5,
+            "level-10": 10,
+            "level-15": 15,
+            "level-20": 20,
+            "level-25": 25,
+            "level-30": 30,
+            "level-35": 35,
+            "level-40": 40,
+            "level-45": 45,
+            "level-50": 50,
+            "level-55": 55,
+            "level-60": 60,
+            "level-65": 65,
+            "level-70": 70,
+            "level-75": 75,
+            "level-80": 80,
+            "level-85": 85,
+            "level-90": 90,
+            "level-95": 95,
+            "level-100": 100
+        },
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
     },
 
     "network": {
     "interface": "wlan0",
     "format": "{ifname}",
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": "",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",
     "format-disconnected": "",
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
-    },
-
-    "pulseaudio/slider": {
-        "min": 0,
-        "max": 100,
-        "orientation": "horizontal"
     },
 
     "power-profiles-daemon": {

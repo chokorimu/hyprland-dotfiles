@@ -1,15 +1,15 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    min-height: 0;
+    font-family: "0xProto Nerd Font", mononoki, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    min-height: 0px;
 }
 
 window#waybar {
-    background: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: white;
+    background: rgb(0, 0, 0);
+    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/ 
+    color: rgb(255, 255, 255);
 }
 
 tooltip {
@@ -21,33 +21,42 @@ tooltip label {
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background: transparent;
+    margin: 2px 0px 8px 12px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    background-color: rgb(36, 36,36);
+    color: rgb(72, 72, 72);
+    /* border-bottom: 3px solid transparent; */
+}
+
+#workspaces button.active {
+    background-color: #4e4e4e;
     color: white;
-    border-bottom: 3px solid transparent;
+    padding: 0px 38px;
+    /* border-bottom: 3px solid white; */
 }
 
-#workspaces button.focused {
-    background: #64727D;
-    border-bottom: 3px solid white;
+#window {
+    margin: 0px 10px;
 }
 
-#mode, #clock, #battery {
-    padding: 0 10px;
+#clock {
+    padding: 2px 18px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+}
+
+#battery, #network, #pulseaudio {
+    border: 2px solid #000000;
+    margin: 0px 12px 8px 0px;
+    padding: 2px 18px 2px 0px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
 }
 
 #mode {
     background: #64727D;
-    border-bottom: 3px solid white;
-}
-
-#clock {
-    background-color: #64727D;
-}
-
-#battery {
-    background-color: #ffffff;
-    color: black;
+    /* border-bottom: 3px solid white; */
 }
 
 #battery.charging {
@@ -71,3 +80,62 @@ tooltip label {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+#pulseaudio.level-5,
+#pulseaudio.level-10,
+#pulseaudio.level-15 { 
+    background-color: #000000;
+}
+
+#pulseaudio.level-20,
+#pulseaudio.level-25,
+#pulseaudio.level-30 { 
+    background-color: #131313;
+}
+
+#pulseaudio.level-35,
+#pulseaudio.level-40,
+#pulseaudio.level-45 { 
+    background-color: #212121;
+}
+
+#pulseaudio.level-50,
+#pulseaudio.level-55,
+#pulseaudio.level-60 { 
+    background-color: #292929;
+}
+
+#pulseaudio.level-65,
+#pulseaudio.level-70,
+#pulseaudio.level-75 { 
+    background-color: #313131;
+}
+
+#pulseaudio.level-80,
+#pulseaudio.level-85,
+#pulseaudio.level-90,
+#pulseaudio.level-95,
+#pulseaudio.level-100 { 
+    background-color: #363636;
+}
+
+#pulseaudio.level-5 { padding-right: 10px; }
+#pulseaudio.level-10 { padding-right: 20px; }
+#pulseaudio.level-15 { padding-right: 30px; }
+#pulseaudio.level-20 { padding-right: 40px; }
+#pulseaudio.level-25 { padding-right: 50px; }
+#pulseaudio.level-30 { padding-right: 60px; }
+#pulseaudio.level-35 { padding-right: 70px; }
+#pulseaudio.level-40 { padding-right: 80px; }
+#pulseaudio.level-45 { padding-right: 90px; }
+#pulseaudio.level-50 { padding-right: 100px; }
+#pulseaudio.level-55 { padding-right: 110px; }
+#pulseaudio.level-60 { padding-right: 120px; }
+#pulseaudio.level-65 { padding-right: 130px; }
+#pulseaudio.level-70 { padding-right: 140px; }
+#pulseaudio.level-75 { padding-right: 150px; }
+#pulseaudio.level-80 { padding-right: 160px; }
+#pulseaudio.level-85 { padding-right: 170px; }
+#pulseaudio.level-90 { padding-right: 180px; }
+#pulseaudio.level-95 { padding-right: 190px; }
+#pulseaudio.level-100 { padding-right: 200px; }
