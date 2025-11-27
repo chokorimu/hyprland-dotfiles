@@ -60,7 +60,7 @@
     },
 
     "tray": {
-        "icon-size": 21,
+        "icon-size": 28,
         "spacing": 10,
         "icons": {
             "discord": "~/hypr-dotfiles/waybar/icons/discord.jpg",
