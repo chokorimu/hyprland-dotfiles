@@ -97,11 +97,6 @@ tooltip label {
     /* border-bottom: 3px solid white; */
 }
 
-#battery.charging {
-    color: white;
-    background-color: #26A65B;
-}
-
 @keyframes blink {
     to {
         background-color: #ffffff;
@@ -109,7 +104,7 @@ tooltip label {
     }
 }
 
-#battery.warning:not(.charging) {
+/* #battery.warning:not(.charging) {
     background: #f53c3c;
     color: white;
     animation-name: blink;
@@ -117,7 +112,26 @@ tooltip label {
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+} */
+
+#battery.low {
+    background-color: rgb(255, 85, 0);
 }
+
+#battery.critical {
+    background-color: red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
 
 #pulseaudio.level-5,
 #pulseaudio.level-10,
