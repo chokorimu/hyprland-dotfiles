@@ -22,7 +22,11 @@
     "battery": {
         "format": "{icon}",
         "format-icons": ["", "", "", "", ""],
-        "tooltip-format": "{timeTo}, {capacity}%"
+        "tooltip-format": "{timeTo}, {capacity}%",
+        "states": {
+            "low": 30,
+            "critical": 15
+        }
     },
 
     "clock": {
