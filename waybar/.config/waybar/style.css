@@ -81,6 +81,10 @@ tooltip label {
     background-color: rgb(0, 0, 0);
 }
 
+#tray {
+    margin-right: 12px;
+}
+
 #battery, #network, #pulseaudio {
     margin: 0px 12px 8px 0px;
     padding: 2px 8px;
