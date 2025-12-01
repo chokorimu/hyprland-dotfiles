@@ -16,7 +16,9 @@
         "battery"],
 
     "hyprland/window": {
-        "max-length": 50
+        "max-length": 50,
+        "format": "{initialTitle}",
+        "separate-outputs": true
     },
 
     "battery": {
@@ -30,7 +32,8 @@
     },
 
     "clock": {
-        "format": "{:%a, %b %d, %H:%M}"
+        "format": "{:%A %H:%M}",
+        "tooltip-format": "{:%B %d, %Y}"
     },
 
     "hyprland/workspaces": {
@@ -46,10 +49,7 @@
             "active": "",
             "default": ""
         },
-        "sort-by-number": true
-    },
-
-    "hyprland/workspaces": {
+        "sort-by-number": true,
         "persistent-workspaces": {
             "1": [],
             "2": [],
@@ -58,13 +58,8 @@
         }
     },
 
-    "hyprland/window": {
-        "format": "{initialTitle}",
-        "separate-outputs": true
-    },
-
     "tray": {
-        "icon-size": 28,
+        "icon-size": 24,
         "spacing": 10,
         "icons": {
             "discord": "~/hypr-dotfiles/waybar/icons/discord.jpg",
@@ -75,7 +70,7 @@
 
     "image#album-art": {
         "path": "/home/chokorimu/hypr-dotfiles/waybar/.config/waybar/icons/arch-linux.png",
-        "size": 28,
+        "size": 24,
         "interval": 5,
         "on-click": "mpc toggle"
     },
@@ -117,34 +112,34 @@
             "portable": "",
             "car": "",
             "default": ["", ""]
-        },
+            },
         "scroll-step": 1,
         "on-click": "pavucontrol",
         "ignored-sinks": ["Easy Effects Sink"]
     },
 
     "network": {
-    "interface": "wlan0",
-    "format": "{ifname}",
-    "format-wifi": "",
-    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-    "format-disconnected": "",
-    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "{ifname} ",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50
+        "interface": "wlan0",
+        "format": "{ifname}",
+        "format-wifi": "",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
     },
 
     "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-    },
-}
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    }
 }

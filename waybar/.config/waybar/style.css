@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: "0xProto Nerd Font Propo", mononoki, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     min-height: 0px;
 }
 
@@ -69,13 +69,13 @@ tooltip label {
 }
 
 #window {
-    margin: 0px 10px;
+    margin: 0px 0px 2px 10px;
 }
 
 #clock {
 /*     border-left: 500px solid #000000;
     border-right: 500px solid #000000; */
-    margin-top: 0px;
+    margin-bottom: 2px;
     padding: 2px 18px;
     border-radius: 20px;
     background-color: rgb(0, 0, 0);
@@ -83,6 +83,7 @@ tooltip label {
 
 #tray {
     margin-right: 12px;
+    margin-bottom: 4px;
 }
 
 #battery, #network, #pulseaudio {
