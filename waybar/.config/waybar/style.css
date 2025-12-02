@@ -128,9 +128,9 @@ tooltip label {
     animation-direction: alternate;
 }
 
-#battery.charging {
-    color: white;
-    background-color: #26A65B;
+#battery.high:not(.charging) {
+    color: rgb(255, 255, 255);
+    background-color: #829600;
 }
 
 
