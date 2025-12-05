@@ -123,7 +123,7 @@ clear() {
 }		 
 
 autoload -Uz vcs_info
-precmd_vcs_info(){
+precmd(){
   vcs_info
 }
 zstyle ':vcs_info:git:*' formats '%F{yellow} ❯ branch:%b%f'
