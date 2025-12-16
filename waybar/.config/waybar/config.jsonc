@@ -1,9 +1,10 @@
-{
+{   
+    "margin": "10px, 10px, 0px, 10px",    
+
     "layer": "top",
     "modules-left": [
         "image#album-art",
         "hyprland/workspaces",
-        "hyprland/window",
         "hyprland/mode"
         ],
     "modules-center": [
@@ -71,7 +72,7 @@
 
     "image#album-art": {
         "path": "/home/chokorimu/hypr-dotfiles/waybar/.config/waybar/icons/arch-linux.png",
-        "size": 24,
+        "size": 20,
         "interval": 5,
         "on-click": "mpc toggle"
     },
@@ -134,7 +135,7 @@
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname} ",
-        "tooltip-format-disconnected": "Disconnected",
+        "tooltip-format-disconnected": "Disconnected"
     },
 
     "power-profiles-daemon": {

@@ -1,80 +1,44 @@
 * {
     border: none;
-    border-radius: 0;
-    font-family: "0xProto Nerd Font Propo", mononoki, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "CaskaydiaCove Nerd Font Propo", mononoki, Roboto, Helvetica, Arial, sans-serif;
     font-size: 18px;
-    min-height: 0px;
-}
-
-window#waybar {
-    background: rgba(0, 0, 0, 255);
-    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/ 
-    color: rgb(255, 255, 255);
+    min-height: 28px;
 }
 
 tooltip {
-  background: rgba(43, 48, 59, 0.5);
-  border: 1px solid rgba(100, 114, 125, 0.5);
+    background: rgba(43, 48, 59, 0.5);
+    border: 1px solid rgba(100, 114, 125, 0.5);
 }
 tooltip label {
-  color: white;
+    color: white;
 }
 
-/* #workspaces button {
-    margin: 2px 0px 8px 12px;
-    padding: 2px 10px;
-    border-radius: 20px;
-    background-color: rgb(36, 36,36);
-    color: rgb(0, 0, 0);
+window#waybar {
+    background: rgb(24, 39, 49);
+    border-radius: 12;
+    color: rgb(255, 255, 255);
 }
 
-#workspaces button.active {
-    background-color: #ababab;
-    color: rgb(0, 0, 0);
-    padding: 0px 38px;
-} */
-
+#image {
+    margin: 0px 12px 0px 12px;
+}
 #workspaces button {
-    margin: 0px 0px 8px 0px;
+    margin: 0px 0px 0px 0px;
     padding: 2px 16px;
     background-color: rgb(36, 36,36);
     color: rgb(0, 0, 0);
 }
-
-#workspaces button:nth-child(1){
-    margin: 0px 0px 8px 12px;
-    padding: 2px 16px;
-    border-radius: 20px 0px 0px 20px;
-    background-color: rgb(36, 36,36);
-    color: rgb(0, 0, 0);
-}
-
-#workspaces button:last-child{
-    margin: 0px 0px 8px 0px;
-    padding: 2px 16px;
-    border-radius: 0px 20px 20px 0px;
-    background-color: rgb(36, 36,36);
-    color: rgb(0, 0, 0);
-}
-
 #workspaces button.active {
     background-color: #ababab;
     border-radius: 20px;
     color: rgb(0, 0, 0);
     padding: 0px 42px;
 }
-
-#image {
-    margin: 0px 0px 0px 12px;
-}
-
 #window {
     margin: 0px 0px 2px 10px;
 }
 
 #clock {
-/*     border-left: 500px solid #000000;
-    border-right: 500px solid #000000; */
     margin-bottom: 2px;
     padding: 2px 18px;
     border-radius: 20px;
@@ -85,17 +49,19 @@ tooltip label {
     margin-right: 12px;
     margin-bottom: 4px;
 }
-
-#battery, #network, #pulseaudio {
-    margin: 0px 8px 8px 0px;
-    padding: 2px 8px;
+#network, #pulseaudio {
+    padding: 0px 19px;
     border-radius: 20px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(57, 116, 119);
+}
+#battery{
+    padding: 0px 19px;
+    border-radius: 18px;
+    background-color: rgb(57, 116, 119);
 }
 
 #mode {
     background: #64727D;
-    /* border-bottom: 3px solid white; */
 }
 
 @keyframes blink {
@@ -105,20 +71,9 @@ tooltip label {
     }
 }
 
-/* #battery.warning:not(.charging) {
-    background: #f53c3c;
-    color: white;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-} */
-
 #battery.low {
     background-color: rgb(255, 85, 0);
 }
-
 #battery.critical {
     background-color: red;
     animation-name: blink;
@@ -127,7 +82,6 @@ tooltip label {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
 #battery.high:not(.charging) {
     color: rgb(255, 255, 255);
     background-color: #829600;
@@ -157,6 +111,17 @@ tooltip label {
     border-radius: 5px;
     background: #ababab;
 }
+
+/* 
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} 
 
 #pulseaudio.level-5,
 #pulseaudio.level-10,
@@ -216,3 +181,20 @@ tooltip label {
 #pulseaudio.level-90 { padding-right: 180px; }
 #pulseaudio.level-95 { padding-right: 190px; }
 #pulseaudio.level-100 { padding-right: 200px; }
+
+#workspaces button:nth-child(1){
+    margin: 0px 0px 8px 12px;
+    padding: 2px 16px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: rgb(36, 36,36);
+    color: rgb(0, 0, 0);
+}
+
+#workspaces button:last-child{
+    margin: 0px 0px 8px 0px;
+    padding: 2px 16px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: rgb(36, 36,36);
+    color: rgb(0, 0, 0);
+}
+*/
