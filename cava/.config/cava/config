@@ -23,7 +23,7 @@ framerate = 165
 # The number of bars (0-512). 0 sets it to auto (fill up console).
 # Bars' width and space between bars in number of characters.
 ; bars = 0
-bar_width = 4
+bar_width = 3
 bar_spacing = 1
 # bar_height is only used for output in "noritake" format
 ; bar_height = 32
@@ -249,7 +249,7 @@ bar_spacing = 1
 # You can define as many as 8 different colors. They range from bottom to top of screen
 gradient = 1
 gradient_color_1 = "#FFFFFF"
-gradient_color_2 = "#333333"
+gradient_color_2 = "#3CA4B6"
 ; gradient_color_3 = '#a6cc33'
 ; gradient_color_4 = '#cccc33'
 ; gradient_color_5 = '#cca633'
@@ -279,7 +279,7 @@ gradient_color_2 = "#333333"
 
 # use theme file instead of defining colors in this file
 # themes are located in $HOME/.config/cava/themes
-; theme = 'none'
+theme = 'solarized_dark'
 
 
 [smoothing]
@@ -306,7 +306,7 @@ gradient_color_2 = "#333333"
 # Noise reduction, int 0 - 100. default 77
 # the raw visualization is very noisy, this factor adjusts the integral and gravity filters to keep the signal smooth
 # 100 will be very slow and smooth, 0 will be fast but noisy.
-; noise_reduction = 77
+noise_reduction = 55
 
 
 [eq]
