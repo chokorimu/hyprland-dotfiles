@@ -3,17 +3,6 @@
   "logo": {
     "type": "auto",
     "source": "arch_small",
-    "color": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
-      "7": "",
-      "8": "",
-      "9": ""
-    },
     "width": null,
     "height": null,
     "padding": {
@@ -31,22 +20,11 @@
     }
   },
   "display": {
-    "stat": false,
-    "pipe": false,
-    "showErrors": false,
-    "disableLinewrap": true,
-    "hideCursor": false,
     "separator": "  ",
     "color": {
       "keys": "cyan",
       "title": "",
-      "output": "",
-      "separator": ""
-    },
-    "brightColor": true,
-    "duration": {
-      "abbreviation": false,
-      "spaceBeforeUnit": "default"
+      "output": ""
     },
     "size": {
       "maxPrefix": "YB",
@@ -54,89 +32,41 @@
       "ndigits": 1,
       "spaceBeforeUnit": "never"
     },
-    "temp": {
-      "unit": "D",
-      "ndigits": 1,
-      "color": {
-        "green": "32",
-        "yellow": "93",
-        "red": "91"
-      },
-      "spaceBeforeUnit": "default"
-    },
-    "percent": {
-      "type": 0,
-      "ndigits": 0,
-      "color": {
-        "green": "32",
-        "yellow": "93",
-        "red": "91"
-      },
-      "spaceBeforeUnit": "default",
-      "width": 0
-    },
-    "bar": {
-      "char": {
-        "elapsed": "■",
-        "total": "-"
-      },
-      "border": {
-        "left": "[ ",
-        "right": " ]",
-        "leftElapsed": "",
-        "rightElapsed": ""
-      },
-      "color": {
-        "elapsed": "auto",
-        "total": "97",
-        "border": "97"
-      },
-      "width": 10
-    },
-    "fraction": {
-      "ndigits": 2
-    },
-    "noBuffer": false,
     "key": {
-      "width": 10,
       "type": "string",
-      "paddingLeft": 1
-    },
-    "freq": {
-      "ndigits": 2,
-      "spaceBeforeUnit": "never"
-    },
-    "constants": []
+      "paddingLeft": 0,
+      "width": 9
+    }
   },
-  "general": {
-    "thread": true,
-    "processingTimeout": 5000,
-    "detectVersion": true,
-    "playerName": "",
-    "dsForceDrm": false
-  },
+
   "modules": [
+    "title",
     {
       "type": "os",
       "key": "os",
       "keyIcon": "",
       "format": "{name} {arch}"
     },
-    {
-      "type": "kernel",
-      "key": "kernel",
-      "keyIcon": ""
-    },
-    {
+    /* {
       "type": "disk",
       "key": "os-age",
       "format": "{days}d {hours}h {minutes}m"
-    },
+    }, */
     {
       "type": "uptime",
       "key": "upt",
       "keyIcon": "",
       "format": "{hours}h {minutes}m"
+    },
+    {
+      "type": "packages",
+      "key": "pkgs",
+      "keyIcon": "󰏖",
+      "format": "",
+      "disabled": [
+        "apk"
+      ],
+      "combined": false
     },
     {
       "type": "shell",
@@ -155,27 +85,17 @@
       "key": "wm",
       "keyIcon": "",
       "detectPlugin": false,
-      "format": "{process-name}"
+      "format": "{process-name} {version}"
     },
     {
       "type": "memory",
       "key": "mem",
       "keyIcon": "",
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      },
       "format": "{used} / {total}"
     },
     {
       "type": "swap",
       "key": "swp",
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      },
       "keyIcon": "󰓡",
       "separate": false,
       "format": "{used} / {total}"
@@ -186,7 +106,7 @@
       "key": " ",
       "keyIcon": "",
       "symbol": "circle",
-      "paddingLeft": 1,
+      "paddingLeft": 0,
       "block": {
         "width": 3,
         "range": [

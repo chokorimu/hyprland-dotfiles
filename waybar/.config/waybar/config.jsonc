@@ -4,17 +4,19 @@
     "layer": "top",
     "modules-left": [
         "image#album-art",
-        "hyprland/workspaces",
         "hyprland/mode"
-        ],
+    ],
     "modules-center": [
-        "clock"
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "tray",
         "network",
-        "pulseaudio/slider",
-        "battery"],
+        "memory",
+        "pulseaudio",
+        "clock",
+        "battery"
+    ],
 
     "hyprland/window": {
         "max-length": 50,
@@ -23,9 +25,13 @@
     },
 
     "battery": {
+        "interval": "30",
         "format": "{icon}",
-        "format-icons": ["", "", "", "", ""],
-        "tooltip-format": "{timeTo}, {capacity}%",
+        "format-icons": {
+            "default": ["", "", "", "", ""],
+            "charging": [""]
+        },
+        "tooltip-format": "{timeTo} {capacity}%",
         "states": {
             "high": 75,
             "low": 30,
@@ -34,8 +40,8 @@
     },
 
     "clock": {
-        "format": "{:%A %H:%M}",
-        "tooltip-format": "{:%B %d, %Y}"
+        "format": " {:%H:%M}",
+        "tooltip-format": "{:%A %B %d %Y}"
     },
 
     "hyprland/workspaces": {
@@ -62,7 +68,7 @@
 
     "tray": {
         "icon-size": 24,
-        "spacing": 10,
+        "spacing": 18,
         "icons": {
             "discord": "~/hypr-dotfiles/waybar/icons/discord.jpg",
             "blueman": "bluetooth",
@@ -77,32 +83,16 @@
         "on-click": "mpc toggle"
     },
 
+    "memory": {
+        "interval": 30,
+        "format": " {used:0.1f}",
+        "tooltip-format": "{percentage}% used"
+    },
+
     "pulseaudio": {
-        "format": "{icon}",
+        "format": "{icon} {volume}",
         "format-bluetooth": "{icon}",
         "format-muted": "",
-        "states": {
-            "level-5": 5,
-            "level-10": 10,
-            "level-15": 15,
-            "level-20": 20,
-            "level-25": 25,
-            "level-30": 30,
-            "level-35": 35,
-            "level-40": 40,
-            "level-45": 45,
-            "level-50": 50,
-            "level-55": 55,
-            "level-60": 60,
-            "level-65": 65,
-            "level-70": 70,
-            "level-75": 75,
-            "level-80": 80,
-            "level-85": 85,
-            "level-90": 90,
-            "level-95": 95,
-            "level-100": 100
-        },
         "format-icons": {
             "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
             "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
@@ -136,17 +126,5 @@
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected"
-    },
-
-    "power-profiles-daemon": {
-        "format": "{icon}",
-        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-        "tooltip": true,
-        "format-icons": {
-            "default": "",
-            "performance": "",
-            "balanced": "",
-            "power-saver": ""
-        }
     }
 }
