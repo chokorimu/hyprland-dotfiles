@@ -3,7 +3,7 @@
 
     "layer": "top",
     "modules-left": [
-        "image#album-art",
+        "image#album-art","custom/spotify",
         "hyprland/mode"
     ],
     "modules-center": [
@@ -59,16 +59,13 @@
         },
         "sort-by-number": true,
         "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": []
+            "1": [], "2": [], "3": [], "4": []
         }
     },
 
     "tray": {
         "icon-size": 24,
-        "spacing": 18,
+        "spacing": 8,
         "icons": {
             "discord": "~/hypr-dotfiles/waybar/icons/discord.jpg",
             "blueman": "bluetooth",
@@ -81,6 +78,14 @@
         "size": 20,
         "interval": 5,
         "on-click": "mpc toggle"
+    },
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 $HOME/hypr-dotfiles/waybar/.config/waybar/scripts/mediaplayer.py --player spotify",
+        "format": "{}",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
     },
 
     "memory": {
