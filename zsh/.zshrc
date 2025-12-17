@@ -103,29 +103,30 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-echo '               8     
-.d88 8d8b .d8b 8d8b. 
-8  8 8P   8    8P Y8 
-`Y88 8    `Y8P 8   8'
-
-clear() {
-	command clear
-	echo '               8     
-.d88 8d8b .d8b 8d8b. 
-8  8 8P   8    8P Y8 
-`Y88 8    `Y8P 8   8'
-}		 
+# echo '               8     
+# .d88 8d8b .d8b 8d8b. 
+# 8  8 8P   8    8P Y8 
+# `Y88 8    `Y8P 8   8'
+# 
+# clear() {
+# 	command clear
+# 	echo '               8     
+# .d88 8d8b .d8b 8d8b. 
+# 8  8 8P   8    8P Y8 
+# `Y88 8    `Y8P 8   8'
+# }		 
 
 autoload -Uz vcs_info
 precmd(){
   vcs_info
 }
-zstyle ':vcs_info:git:*' formats '  on %K{yellow} %F{black}|%b%f %k'
+zstyle ':vcs_info:git:*' formats ' %K{yellow} %F{black}|%b%f %k'
 
 setopt PROMPT_SUBST
-PROMPT='
-╭─ %F{cyan}%~%f${vcs_info_msg_0_}
-╰─%F{blue}%f '
+PROMPT='%F{cyan}%~%f${vcs_info_msg_0_}
+%F{blue}%f '
+# PROMPT='╭─ %F{cyan}%~%f${vcs_info_msg_0_}
+# ╰─%F{blue}%f '
 
 koyuki() {
   echo '
