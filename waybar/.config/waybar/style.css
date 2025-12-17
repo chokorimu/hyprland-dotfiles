@@ -19,15 +19,24 @@ window#waybar {
     background: rgba(24, 39, 49, 0);
 }
 
-#image {
+#image{
     padding: 0px 12px;
-    border-radius: 12px;
+    border-radius: 20px;
     color: #000000;
+    background-color: rgb(17, 93, 112);
+}
+.custom-spotify{
+    margin-left: 8px;
+    padding: 0px 12px;
+    border-radius: 20px;
+    border: 4px solid rgb(17, 93, 112);
     background-color: rgb(7, 54, 66);
 }
+
 #workspaces{
     padding: 8px 12px;
-    border-radius: 16px;
+    border-radius: 20px;
+    border: 4px solid rgb(17, 93, 112);
     background-color: rgb(7, 54, 66);
 }
 #workspaces button{
@@ -45,25 +54,30 @@ window#waybar {
 
 #tray{
     margin-right: 8px;
-    padding: 0px 10px;
-    border-radius: 12px;
+    padding: 0px 14px;
+    border-radius: 20px;
     background-color: rgb(17, 93, 112);;
 }
 
 #network{
-    padding: 0px 10px;
-    border-radius: 12px 0px 0px 12px;
+    padding: 0px 10px 0px 14px;
+    border-radius: 20px 0px 0px 20px;
+    border-top: 4px solid rgb(17, 93, 112);
+    border-bottom: 4px solid rgb(17, 93, 112);
+    border-left: 4px solid rgb(17, 93, 112);
     background-color: rgb(7, 54, 66);
 }
 #memory, #pulseaudio, #clock{
     padding: 0px 10px;
     border-radius: 0px;
+    border-top: 4px solid rgb(17, 93, 112);
+    border-bottom: 4px solid rgb(17, 93, 112);
     background-color: rgb(7, 54, 66);
 }
 
 #battery{
-    padding: 0px 10px;
-    border-radius: 0px 12px 12px 0px;
+    padding: 0px 14px 0px 10px;
+    border-radius: 0px 20px 20px 0px;
     background-color: rgb(7, 54, 66);
 }
 

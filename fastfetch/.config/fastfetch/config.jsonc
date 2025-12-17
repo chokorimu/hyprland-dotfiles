@@ -62,7 +62,7 @@
       "type": "packages",
       "key": "pkgs",
       "keyIcon": "󰏖",
-      "format": "",
+      "format": "{pacman} (pacman)",
       "disabled": [
         "apk"
       ],
