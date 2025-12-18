@@ -5,6 +5,12 @@
     min-height: 18px;
 }
 
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
 tooltip {
     background: rgba(43, 48, 59, 0.5);
     border: 1px solid rgba(100, 114, 125, 0.5);
@@ -34,6 +40,7 @@ window#waybar {
 }
 
 #workspaces{
+    margin: 0px 8px;
     padding: 8px 12px;
     border-radius: 20px;
     border: 4px solid rgb(17, 93, 112);
@@ -75,27 +82,23 @@ window#waybar {
     background-color: rgb(7, 54, 66);
 }
 
+#mode {
+    background: #64727D;
+}
+
 #battery{
     padding: 0px 14px 0px 10px;
     border-radius: 0px 20px 20px 0px;
     background-color: rgb(7, 54, 66);
 }
-
-#mode {
-    background: #64727D;
+#battery:not(.high){
+    border-top: 0px solid rgb(17, 93, 112);
+    border-bottom: 0px solid rgb(17, 93, 112);
+    border-right: 0px solid rgb(17, 93, 112);
+    color: rgb(100, 219, 183);
+    background-color: #829600;
 }
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
-    }
-}
-
-#battery.low {
-    background-color: rgb(255, 85, 0);
-}
-#battery.critical {
+#battery.critical{
     background-color: red;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -103,9 +106,17 @@ window#waybar {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-#battery.charging, #battery:not(.high) {
+#battery.low{
+    background-color: rgb(255, 85, 0);
+}
+#battery.charging{
     color: rgb(100, 219, 183);
     background-color: #829600;
+}
+#battery.high:not(.charging):not(.low):not(.critical){
+    border-top: 4px solid rgb(17, 93, 112);
+    border-bottom: 4px solid rgb(17, 93, 112);
+    border-right: 4px solid rgb(17, 93, 112);
 }
 
 /* 
