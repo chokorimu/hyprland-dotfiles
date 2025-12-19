@@ -100,12 +100,15 @@ window#waybar {
 }
 #battery.critical{
     background-color: red;
+}
+#battery.critical:not(.charging){
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
 #battery.low{
     background-color: rgb(255, 85, 0);
 }
