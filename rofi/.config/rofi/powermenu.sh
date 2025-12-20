@@ -1,39 +1,39 @@
 #!/bin/bash
 
 # 1. Defined Options
-lock="Lock"
-logout="Logout"
-suspend="Suspend"
-reboot="Reboot"
-shutdown="Shutdown"
+lock="~/.config/rofi/icons/lock_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
+logout="~/.config/rofi/icons/exit_to_app_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
+suspend="~/.config/rofi/icons/pause_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
+reboot="~/.config/rofi/icons/replay_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
+poweroff="~/.config/rofi/icons/mode_off_on_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
 
 # 2. Check if a button was clicked
 # "$@" is what Rofi passes back to us when we select an item
 if [ -z "$@" ]; then
     # If nothing is selected, SHOW the menu
-    echo "$lock"
-    echo "$logout"
-    echo "$suspend"
-    echo "$reboot"
-    echo "$shutdown"
+    echo -en "Lock\0icon\x1f$lock\n"
+    echo -en "Logout\0icon\x1f$logout\n"
+    echo -en "Suspend\0icon\x1f$suspend\n"
+    echo -en "Reboot\0icon\x1f$reboot\n"
+    echo -en "Poweroff\0icon\x1f$poweroff\n"
 else
     # If something was selected, DO the action
     # We use ( ... ) & to run the command in the background
     # We redirect output to /dev/null so Rofi doesn't think we are printing more menu items
     case "$1" in
-        "$lock") 
+        "Lock") 
             (sleep 0.5; hyprlock) >/dev/null 2>&1 & 
             ;;
-        "$logout") 
+        "Logout") 
             (sleep 0.5; hyprctl dispatch exit) >/dev/null 2>&1 & 
             ;;
-        "$suspend") 
+        "Suspend") 
             (sleep 0.5; systemctl suspend) >/dev/null 2>&1 & 
             ;;
-        "$reboot") 
+        "Reboot") 
             (sleep 0.5; systemctl reboot) >/dev/null 2>&1 & 
             ;;
-        "$shutdown") 
+        "Poweroff") 
             (sleep 0.5; systemctl poweroff) >/dev/null 2>&1 & 
             ;;
     esac
