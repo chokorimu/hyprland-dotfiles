@@ -1,0 +1,5 @@
+* {
+    background: #073642;
+    foreground: #8fbdc4;
+    selected: rgba(17, 150, 183);
+}
