@@ -33,7 +33,7 @@ listview {
 }
 
 element {
-    padding: 30px 10px 30px 10px;
+    padding: 200px 10px 200px 10px;
     background-color: inherit;
     text-color: inherit;
     orientation: vertical;
@@ -53,7 +53,7 @@ element-text {
 }
 
 element-icon {
-    size: 400px;
+    size: 128px;
     margin: 0px 0px 15px 0px;
     horizontal-align: 0.5;
     background-color: inherit;
