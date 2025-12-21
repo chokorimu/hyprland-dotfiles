@@ -6,7 +6,8 @@ configuration {
 }
 
 window {
-    width: 1000px;
+    width: 900px;
+    padding: 10px;
     border: 0px;
     border-radius: 22px;
     background-color: @background;

@@ -1,33 +1,16 @@
+@import "config.rasi"
+@import "colors.rasi"
+
 configuration {
-    modi: "drun,run";
     show-icons: true;
-    display-drun: "Apps";
-    display-run: "Run";
-    drun-display-format: "{name}";
 }
 
-@import "colors.rasi"
-@import "fonts.rasi"
-
 window {
-    width: 500px;
-    x-offset: 0px;
-    y-offset: 0px;
-    margin: 0px;
+    width: 900px;
     padding: 10px;
     border: 0px;
     border-radius: 22px;
     background-color: @background;
-
-}
-
-mainbox {
-    enabled: true;
-    spacing: 0px;
-    margin: 0px;
-    padding: 0px;
-    background-color: transparent;
-    children: [ "message", "inputbar", "listview", "mode-switcher"];
 }
 
 inputbar {
@@ -39,25 +22,17 @@ inputbar {
     children: ["textbox-prompt-colon", "entry"];
 }
 
-textbox-prompt-colon {
-    str: " ";
-    padding: 0px;
-    expand: false;
-    background-color: inherit;
-    text-color: inherit;
-}
-
 entry {
     background-color: inherit;
     text-color: inherit;
-    placeholder: "Search...";
+    placeholder: "Search Wallpapers...";
     placeholder-color: inherit;
 }
 
 listview {
     border: 0px;
-    columns: 1;
-    lines: 7;
+    columns: 5;
+    lines: 2;
     cycle: true;
     dynamic: true;
     scrollbar: false;
@@ -71,9 +46,10 @@ listview {
 }
 
 element {
-    padding: 5px;
+    padding: 5px 20px 5px 20px;
     background-color: inherit;
     text-color: inherit;
+    orientation: vertical;
 }
 
 element selected.normal {
@@ -85,11 +61,14 @@ element selected.normal {
 element-text {
     background-color: inherit;
     text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
 }
 
 element-icon {
-    margin: 0px 10px 0px 0px;
-    size: 30px;
+    size: 128px;
+    margin: 0px 0px 15px 0px;
+    horizontal-align: 0.5;
     background-color: inherit;
     text-color: inherit;
 }

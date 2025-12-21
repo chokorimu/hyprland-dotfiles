@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # 1. Defined Options
-lock="~/.config/rofi/icons/lock_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
-logout="~/.config/rofi/icons/exit_to_app_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
-suspend="~/.config/rofi/icons/pause_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
-reboot="~/.config/rofi/icons/replay_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
-poweroff="~/.config/rofi/icons/mode_off_on_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
+lock="$HOME/.config/rofi/icons/lock_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
+logout="$HOME/.config/rofi/icons/exit_to_app_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
+suspend="$HOME/.config/rofi/icons/pause_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
+reboot="$HOME/.config/rofi/icons/replay_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
+poweroff="$HOME/.config/rofi/icons/mode_off_on_256dp_E3E3E3_FILL1_wght400_GRAD200_opsz48.png"
 
 # 2. Check if a button was clicked
 # "$@" is what Rofi passes back to us when we select an item
