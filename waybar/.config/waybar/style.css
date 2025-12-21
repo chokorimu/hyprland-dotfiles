@@ -1,6 +1,6 @@
 * {
     border: none;
-    font-family: "CaskaydiaCove Nerd Font Propo", "Rubik", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "FantasqueSansMNerdFontPropo", "CaskaydiaCove Nerd Font Propo", "Rubik", Roboto, Helvetica, Arial, sans-serif;
     font-size: 18px;
     min-height: 22px;
 }
@@ -31,8 +31,9 @@ window#waybar {
     color: #000000;
     background-color: rgb(17, 93, 112);
 }
+
 .custom-spotify{
-    margin-left: 8px;
+    margin: 2px 0px 2px 8px;
     padding: 0px 12px;
     border-radius: 20px;
     color: rgb(7, 54, 66);

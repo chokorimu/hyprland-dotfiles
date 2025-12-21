@@ -1,0 +1,22 @@
+[config]
+# 1. reload_on_change: 
+# If true, Matugen automatically runs when you edit this config file.
+reload_on_change = true
+
+# 2. scheme: 
+# Determines the logic for color generation.
+# Options: "content", "expressive", "fidelity", "fruit_salad", "monochrome", "neutral", "rainbow", "tonal_spot"
+# "tonal_spot" is the default Material You look. "fidelity" keeps colors close to the image.
+scheme = "tonal_spot" 
+
+# 3. contrast:
+# Adjusts contrast. Use 0.0 for standard, -1.0 for lower, 1.0 for higher.
+contrast = 0.0
+
+[templates.rofi]
+input_path = "~/.config/matugen/templates/rofi.rasi"
+output_path = "~/.config/rofi/colors.rasi"
+
+[templates.waybar]
+input_path = "~/.config/matugen/templates/waybar.css"
+output_path = "~/.config/waybar/style.css"

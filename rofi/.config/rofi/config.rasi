@@ -14,7 +14,7 @@ window {
     x-offset: 0px;
     y-offset: 0px;
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
     border: 0px;
     border-radius: 22px;
     background-color: @background;
@@ -23,8 +23,8 @@ window {
 
 mainbox {
     enabled: true;
-    spacing: 10px;
-    margin: 10px;
+    spacing: 0px;
+    margin: 0px;
     padding: 0px;
     background-color: transparent;
     children: [ "message", "inputbar", "listview", "mode-switcher"];
