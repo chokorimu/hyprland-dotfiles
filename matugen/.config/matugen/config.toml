@@ -7,7 +7,7 @@ reload_on_change = true
 # Determines the logic for color generation.
 # Options: "content", "expressive", "fidelity", "fruit_salad", "monochrome", "neutral", "rainbow", "tonal_spot"
 # "tonal_spot" is the default Material You look. "fidelity" keeps colors close to the image.
-scheme = "tonal_spot" 
+scheme = "fidelity" 
 
 # 3. contrast:
 # Adjusts contrast. Use 0.0 for standard, -1.0 for lower, 1.0 for higher.
@@ -19,4 +19,5 @@ output_path = "~/.config/rofi/colors.rasi"
 
 [templates.waybar]
 input_path = "~/.config/matugen/templates/waybar.css"
-output_path = "~/.config/waybar/style.css"
+output_path = "~/.config/waybar/colors.css"
+post_hook = 'pkill -SIGUSR2 waybar'

@@ -1,3 +1,5 @@
+@import "colors.css";
+
 * {
     border: none;
     font-family: "FantasqueSansMNerdFontPropo", "CaskaydiaCove Nerd Font Propo", "Rubik", Roboto, Helvetica, Arial, sans-serif;
@@ -20,8 +22,8 @@ tooltip label {
 }
 
 window#waybar {
-    border-radius: 12;
-    color: rgb(147, 161, 161);
+    border-radius: 12px;
+    color: @fg;
     background: rgba(24, 39, 49, 0);
 }
 
@@ -29,59 +31,59 @@ window#waybar {
     padding: 0px 12px;
     border-radius: 20px;
     color: #000000;
-    background-color: rgb(17, 93, 112);
+    background-color: @bg;
 }
 
 .custom-spotify{
-    margin: 2px 0px 2px 8px;
+    margin-left: 8px;
     padding: 0px 12px;
     border-radius: 20px;
-    color: rgb(7, 54, 66);
-    background-color: rgb(17, 150, 183);
+    color: @fg-alt;
+    background-color: @bg-alt;
 }
 
 #workspaces{
     margin: 0px 8px;
     padding: 8px 12px;
     border-radius: 20px;
-    border: 4px solid rgb(17, 93, 112);
-    background-color: rgb(7, 54, 66);
+    border: 0px solid rgb(17, 93, 112);
+    background-color: @bg;
 }
 #workspaces button{
     margin: 0px 2px;
     padding: 0px 2px;
     border-radius: 12px;
-    color: rgb(10, 72, 88);
-    background-color: rgb(10, 72, 88);
+    color: @bg-alt;
+    background-color: @bg-alt;
 }
 #workspaces button.active{
     padding: 0px 16px;
     border-radius: 12px;
-    color: rgb(7, 54, 66);
-    background-color: rgb(17, 150, 183);
+    color: @fg-active;
+    background-color: @bg-active;
 }
 
 #tray{
     margin-right: 8px;
     padding: 0px 14px;
     border-radius: 20px;
-    background-color: rgb(17, 93, 112);;
+    background-color: @bg-alt;
 }
 
 #network{
     padding: 0px 10px 0px 14px;
     border-radius: 20px 0px 0px 20px;
-    border-top: 4px solid rgb(17, 93, 112);
-    border-bottom: 4px solid rgb(17, 93, 112);
-    border-left: 4px solid rgb(17, 93, 112);
-    background-color: rgb(7, 54, 66);
+    border-top: 0px solid rgb(17, 93, 112);
+    border-bottom: 0px solid rgb(17, 93, 112);
+    border-left: 0px solid rgb(17, 93, 112);
+    background-color: @bg;
 }
 #memory, #pulseaudio, #clock{
     padding: 0px 10px;
     border-radius: 0px;
-    border-top: 4px solid rgb(17, 93, 112);
-    border-bottom: 4px solid rgb(17, 93, 112);
-    background-color: rgb(7, 54, 66);
+    border-top: 0px solid rgb(17, 93, 112);
+    border-bottom: 0px solid rgb(17, 93, 112);
+    background-color: @bg;
 }
 
 #mode {
@@ -91,7 +93,7 @@ window#waybar {
 #battery{
     padding: 0px 14px 0px 10px;
     border-radius: 0px 20px 20px 0px;
-    background-color: rgb(7, 54, 66);
+    background-color: @bg;
 }
 #battery:not(.high){
     border-top: 0px solid rgb(17, 93, 112);

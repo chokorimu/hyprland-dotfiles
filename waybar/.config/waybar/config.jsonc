@@ -74,9 +74,9 @@
     },
 
     "image#album-art": {
-        "path": "/home/chokorimu/hypr-dotfiles/waybar/.config/waybar/icons/koyuki.jpg",
-        // "size": 20,
-        "size": 40,
+        "path": "/home/chokorimu/hypr-dotfiles/waybar/.config/waybar/icons/arch.png",
+        "size": 20,
+        // "size": 40,
         "interval": 30,
         "on-click": "rofi -show menu -modi \"menu:~/.config/rofi/powermenu.sh\" -theme \"~/.config/rofi/powermenu.rasi\""
     },
