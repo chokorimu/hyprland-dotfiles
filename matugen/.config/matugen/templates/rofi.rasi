@@ -1,0 +1,7 @@
+* {
+    background: {{colors.surface_container
+    .dark.hex}};
+    foreground: {{colors.on_surface.dark.hex}};
+    selected: {{colors.primary.dark.hex}};
+    selected-foreground: {{colors.on_primary.dark.hex}};
+}

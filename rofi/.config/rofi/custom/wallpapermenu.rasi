@@ -22,6 +22,14 @@ inputbar {
     children: ["textbox-prompt-colon", "entry"];
 }
 
+textbox-prompt-colon {
+    str: " ";
+    padding: 0px;
+    expand: false;
+    background-color: inherit;
+    text-color: inherit;
+}
+
 entry {
     background-color: inherit;
     text-color: inherit;

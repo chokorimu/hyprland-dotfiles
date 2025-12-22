@@ -1,0 +1,6 @@
+@define-color bg {{colors.surface_container.dark.hex}};
+@define-color fg {{colors.on_surface.dark.hex}};
+@define-color bg-alt {{colors.primary_container.dark.hex}};
+@define-color fg-alt {{colors.on_primary_container.dark.hex}};
+@define-color bg-active {{colors.primary.dark.hex}};
+@define-color fg-active {{colors.on_primary.dark.hex}};

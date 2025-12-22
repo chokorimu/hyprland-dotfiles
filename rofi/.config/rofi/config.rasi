@@ -50,7 +50,7 @@ textbox-prompt-colon {
 entry {
     background-color: inherit;
     text-color: inherit;
-    placeholder: "Search...";
+    placeholder: "Search Apps...";
     placeholder-color: inherit;
 }
 
@@ -79,7 +79,7 @@ element {
 element selected.normal {
     border-radius: 12px;
     background-color: @selected;
-    text-color: @background;
+    text-color: @selected-foreground;
 }
 
 element-text {
