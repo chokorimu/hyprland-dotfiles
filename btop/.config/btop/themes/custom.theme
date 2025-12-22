@@ -1,0 +1,50 @@
+# 1. Main UI Colors
+theme[main_bg]="#212018"
+theme[main_fg]="#e6e2d5"
+theme[title]="#e6e2d5"
+theme[hi_fg]="#ceca75"
+theme[selected_bg]="#2b2a22"
+theme[selected_fg]="#ceca75"
+theme[inactive_fg]="#949181"
+
+# 2. Graph Box Outlines
+theme[proc_box]="#949181"
+theme[cpu_box]="#949181"
+theme[mem_box]="#949181"
+theme[net_box]="#949181"
+
+# 3. Box Label Colors
+theme[cpu_box_title]="#e6e2d5"
+theme[mem_box_title]="#e6e2d5"
+theme[net_box_title]="#e6e2d5"
+theme[proc_box_title]="#e6e2d5"
+
+# 4. Graph Colors (The actual data lines)
+# We map these to your accent colors
+theme[cpu_start]="#ceca75"
+theme[cpu_mid]="#cbc8a4"
+theme[cpu_end]="#a5d0bb"
+
+theme[free_start]="#ceca75"
+theme[free_mid]="#cbc8a4"
+theme[free_end]="#a5d0bb"
+
+theme[cached_start]="#ceca75"
+theme[cached_mid]="#cbc8a4"
+theme[cached_end]="#a5d0bb"
+
+theme[available_start]="#ceca75"
+theme[available_mid]="#cbc8a4"
+theme[available_end]="#a5d0bb"
+
+theme[used_start]="#ceca75"
+theme[used_mid]="#cbc8a4"
+theme[used_end]="#a5d0bb"
+
+theme[download_start]="#ceca75"
+theme[download_mid]="#cbc8a4"
+theme[download_end]="#a5d0bb"
+
+theme[upload_start]="#ceca75"
+theme[upload_mid]="#cbc8a4"
+theme[upload_end]="#a5d0bb"

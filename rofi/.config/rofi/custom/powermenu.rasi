@@ -43,7 +43,7 @@ element {
 element selected.normal {
     border-radius: 12px;
     background-color: @selected;
-    text-color: @background;
+    text-color: @selected-foreground;
 }
 
 element-text {
