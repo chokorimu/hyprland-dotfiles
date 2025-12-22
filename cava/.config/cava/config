@@ -279,7 +279,7 @@ gradient_color_2 = "#3CA4B6"
 
 # use theme file instead of defining colors in this file
 # themes are located in $HOME/.config/cava/themes
-theme = 'solarized_dark2'
+theme = 'custom'
 
 
 [smoothing]
