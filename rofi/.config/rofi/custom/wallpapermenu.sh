@@ -2,7 +2,7 @@
 
 WALL_DIR="$HOME/.config/rofi/wallpapers/"
 TRANSITION_TYPE="grow" # Options: grow, outer, random, wave
-TRANSITION_DURATION="2"
+TRANSITION_DURATION="2.5"
 
 if [ -z "$@" ]; then
     find "$WALL_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.webp" -o -iname "*.jpeg" -o -iname "*.gif" \) -print0 | \
