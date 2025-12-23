@@ -1,8 +1,8 @@
 [color]
 gradient = 1
-gradient_color_1 = '#4b4900'
-gradient_color_2 = '#cbc8a4'
-gradient_color_3 = '#cbc8a4'
-gradient_color_4 = '#ceca75'
-gradient_color_5 = '#ceca75'
-gradient_color_6 = '#eae68e'
+gradient_color_1 = '#673d00'
+gradient_color_2 = '#e0c1a3'
+gradient_color_3 = '#e0c1a3'
+gradient_color_4 = '#faba73'
+gradient_color_5 = '#faba73'
+gradient_color_6 = '#ffdcbb'

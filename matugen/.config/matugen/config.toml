@@ -14,6 +14,10 @@ scheme = "neutral"
 # Adjusts contrast. Use 0.0 for standard, -1.0 for lower, 1.0 for higher.
 contrast = 0.0
 
+[templates.hypr]
+input_path = "~/.config/matugen/templates/hypr.conf"
+output_path = "~/.config/hypr/colors.conf"
+
 [templates.rofi]
 input_path = "~/.config/matugen/templates/rofi.rasi"
 output_path = "~/.config/rofi/colors.rasi"
@@ -45,3 +49,13 @@ post_hook = "pywalfox update"
 [templates.pywal_plain]
 input_path = "~/.config/matugen/templates/pywal-plain"
 output_path = "~/.cache/wal/colors"
+
+# 1. Output for Libadwaita / GTK4 (Nautilus, Settings)
+[templates.gtk4]
+input_path = "~/.config/matugen/templates/gtk.css"
+output_path = "~/.config/gtk-4.0/gtk.css"
+
+# 2. Output for Legacy GTK3
+[templates.gtk3]
+input_path = "~/.config/matugen/templates/gtk.css"
+output_path = "~/.config/gtk-3.0/gtk.css"
