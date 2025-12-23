@@ -27,14 +27,22 @@ window#waybar {
     background: rgba(24, 39, 49, 0);
 }
 
-#image{
+#image {
     padding: 0px 12px;
     border-radius: 20px;
     color: #000000;
     background-color: @bg;
 }
 
-.custom-spotify{
+#custom-spotify {
+    margin-left: 8px;
+    padding: 0px 12px;
+    border-radius: 20px;
+    color: @fg-alt;
+    background-color: @bg-alt;
+}
+
+#custom-osu {
     margin-left: 8px;
     padding: 0px 12px;
     border-radius: 20px;
