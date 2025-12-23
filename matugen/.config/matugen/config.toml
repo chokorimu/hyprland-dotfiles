@@ -16,7 +16,7 @@ contrast = 0.0
 
 [templates.hypr]
 input_path = "~/.config/matugen/templates/hypr.conf"
-output_path = "~/.config/hypr/colors.conf"
+output_path = "~/.config/hypr/config/colors.conf"
 
 [templates.rofi]
 input_path = "~/.config/matugen/templates/rofi.rasi"
