@@ -20,6 +20,7 @@
         "exec": "/usr/bin/python3 $HOME/.config/waybar/scripts/mediaplayer.py --player spotify",
         "format": "{}",
         "return-type": "json",
+        "max-length": 55,   
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous"
@@ -27,9 +28,10 @@
     
     "custom/osu": {
         "exec": "~/.config/waybar/scripts/osu-status.sh",
-        "interval": 1,             // Updates every second
-        "format": "{}",          // Adds a music icon
-        "max-length": 40,          // Truncates long song names
+        "interval": 1,            
+        "format": "{}",          
+        "return-type": "json",     
+        "max-length": 55,   
         "tooltip": false
     },
 

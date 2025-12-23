@@ -50,6 +50,11 @@ window#waybar {
     background-color: @bg-alt;
 }
 
+#custom-osu.selecting, #custom-osu.playing {
+    background-color: rgb(169, 67, 113);
+    color: #ffeded;
+}
+
 #workspaces{
     margin: 0px 8px;
     padding: 8px 12px;
