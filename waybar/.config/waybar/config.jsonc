@@ -5,6 +5,7 @@
     "modules-left": [
         "image#album-art",
         "custom/spotify",
+        "custom/osu",
         "hyprland/mode"
     ],
     
@@ -24,12 +25,14 @@
         "on-scroll-down": "playerctl previous"
     },
     
-    "hyprland/window": {
-        "max-length": 50,
-        "format": "{initialTitle}",
-        "separate-outputs": true
+    "custom/osu": {
+        "exec": "~/.config/waybar/scripts/osu-status.sh",
+        "interval": 1,             // Updates every second
+        "format": "{}",          // Adds a music icon
+        "max-length": 40,          // Truncates long song names
+        "tooltip": false
     },
-    
+
     "modules-center": [
         "hyprland/workspaces"
     ],
