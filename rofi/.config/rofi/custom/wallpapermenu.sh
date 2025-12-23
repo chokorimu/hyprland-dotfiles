@@ -5,7 +5,7 @@ TRANSITION_TYPE="grow" # Options: grow, outer, random, wave
 TRANSITION_DURATION="2"
 
 if [ -z "$@" ]; then
-    find "$WALL_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.webp" \) -print0 | \
+    find "$WALL_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.webp" -o -iname "*.jpeg" -o -iname "*.gif" \) -print0 | \
     sort -z | \
     while IFS= read -r -d '' file; do
         filename=$(basename "$file")

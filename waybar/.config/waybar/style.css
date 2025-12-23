@@ -121,9 +121,9 @@ window#waybar {
     background-color: #829600;
 }
 #battery.high:not(.charging):not(.low):not(.critical){
-    border-top: 4px solid rgb(17, 93, 112);
-    border-bottom: 4px solid rgb(17, 93, 112);
-    border-right: 4px solid rgb(17, 93, 112);
+    border-top: 0px solid rgb(17, 93, 112);
+    border-bottom: 0px solid rgb(17, 93, 112);
+    border-right: 0px solid rgb(17, 93, 112);
 }
 
 /* 
