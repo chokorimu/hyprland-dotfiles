@@ -1,0 +1,141 @@
+/**
+ * @name Matugen Midnight (No-Mix)
+ * @description Dynamic Midnight theme using pure Material Tokens
+ * @author Matugen
+ * @version 2.1.1
+*/
+
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+    /* Basic Config */
+    --font: 'figtree';
+    --code-font: '';
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 1px;
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+    --border-hover-transition: 0.2s ease;
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+    --custom-dms-icon: custom;
+    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-subtle);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --background-image: off;
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+    --custom-chatbar: off;
+    --chatbar-height: 47px;
+    --small-user-panel: on;
+}
+
+:root {
+    --colors: on;
+
+    /* --- TEXT COLORS --- */
+    --text-0: {{colors.surface.default.hex}};              /* Darkest Text (Background match) */
+    --text-1: {{colors.on_surface.default.hex}};           /* Brightest Text */
+    --text-2: {{colors.on_surface.default.hex}};           /* Headings */
+    --text-3: {{colors.on_surface_variant.default.hex}};   /* Normal Text */
+    --text-4: {{colors.on_surface_variant.default.hex}};   /* Icons */
+    --text-5: {{colors.outline.default.hex}};              /* Muted/Timestamps */
+
+    /* --- BACKGROUNDS --- */
+    --bg-1: {{colors.surface_container_highest.default.hex}}; /* Lightest Surface */
+    --bg-2: {{colors.surface_container_high.default.hex}};
+    --bg-3: {{colors.surface_container.default.hex}};
+    --bg-4: {{colors.surface.default.hex}};                   /* Darkest Surface */
+
+    /* --- STATES (Using Alpha Hex Codes) --- */
+    /* Material tokens don't have alphas, so we append hex opacity manually */
+    --hover: {{colors.on_surface.default.hex}}1a;          /* 10% Opacity */
+    --active: {{colors.on_surface.default.hex}}33;         /* 20% Opacity */
+    --active-2: {{colors.on_surface.default.hex}}4d;       /* 30% Opacity */
+    --message-hover: {{colors.on_surface.default.hex}}0d;  /* 5% Opacity */
+
+    /* --- ACCENT MAPPING --- */
+    --accent-1: var(--blue-1);
+    --accent-2: var(--blue-2);
+    --accent-3: var(--blue-3);
+    --accent-4: var(--blue-4);
+    --accent-5: var(--blue-5);
+    --accent-new: var(--accent-2);
+
+    /* --- SPECIAL GRADIENTS --- */
+    /* Mentions: Uses Primary Container for visibility */
+    --mention: linear-gradient(to right, {{colors.primary_container.default.hex}} 40%, transparent);
+    --mention-hover: linear-gradient(to right, {{colors.primary_container.default.hex}} 40%, transparent);
+    
+    /* Reply: Uses Surface Variant */
+    --reply: linear-gradient(to right, {{colors.surface_container_highest.default.hex}} 40%, transparent);
+    --reply-hover: linear-gradient(to right, {{colors.surface_container_high.default.hex}} 40%, transparent);
+
+    /* --- INDICATORS --- */
+    --online:    {{colors.inverse_primary.default.hex}};
+    --dnd:       {{colors.error.default.hex}};
+    --idle:      {{colors.tertiary_container.default.hex}};
+    --streaming: {{colors.primary.default.hex}};
+    --offline:   {{colors.outline.default.hex}};
+
+    /* --- BORDERS --- */
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--active);
+    --button-border: {{colors.on_surface.default.hex}}1a;
+
+    /* --- COLOR SCALES (THE NO-MIX LOGIC) --- */
+    /* We use the natural Material hierarchy:
+       1 (Lightest) -> Primary Container (Pastel)
+       2 (Light)    -> Primary Fixed (Bright)
+       3 (Mid)      -> Primary (Vibrant)
+       4 (Dark)     -> Primary Fixed Dim (Muted)
+       5 (Darkest)  -> On Primary Container (Very Dark/Rich)
+    */
+
+    /* BLUE -> PRIMARY SCALE */
+    --blue-1: {{colors.primary_container.default.hex}};
+    --blue-2: {{colors.primary_fixed.default.hex}};
+    --blue-3: {{colors.primary.default.hex}};
+    --blue-4: {{colors.primary_fixed_dim.default.hex}};
+    --blue-5: {{colors.on_primary_container.default.hex}};
+
+    /* RED -> ERROR SCALE */
+    --red-1: {{colors.error_container.default.hex}};
+    --red-2: {{colors.error.default.hex}};
+    --red-3: {{colors.error.default.hex}};      /* Error has fewer tokens, repeating is fine */
+    --red-4: {{colors.on_error_container.default.hex}};
+    --red-5: {{colors.on_error_container.default.hex}};
+
+    /* GREEN -> INVERSE/TERTIARY SCALE */
+    --green-1: {{colors.inverse_primary.default.hex}}; 
+    --green-2: {{colors.inverse_primary.default.hex}};
+    --green-3: {{colors.tertiary.default.hex}};
+    --green-4: {{colors.tertiary_fixed_dim.default.hex}};
+    --green-5: {{colors.on_tertiary_container.default.hex}};
+
+    /* YELLOW -> SECONDARY SCALE */
+    --yellow-1: {{colors.secondary_container.default.hex}};
+    --yellow-2: {{colors.secondary_fixed.default.hex}};
+    --yellow-3: {{colors.secondary.default.hex}};
+    --yellow-4: {{colors.secondary_fixed_dim.default.hex}};
+    --yellow-5: {{colors.on_secondary_container.default.hex}};
+
+    /* PURPLE -> TERTIARY SCALE */
+    --purple-1: {{colors.tertiary_container.default.hex}};
+    --purple-2: {{colors.tertiary_fixed.default.hex}};
+    --purple-3: {{colors.tertiary.default.hex}};
+    --purple-4: {{colors.tertiary_fixed_dim.default.hex}};
+    --purple-5: {{colors.on_tertiary_container.default.hex}};
+}
