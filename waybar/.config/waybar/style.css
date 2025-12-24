@@ -2,8 +2,8 @@
 
 * {
     border: none;
-    font-family: "MartianMono Nerd Font Propo", "Rubik", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-family: "ZedMono Nerd Font Propo", "Rubik", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 22px;
     min-height: 22px;
 }
 
@@ -14,11 +14,11 @@
     }
 }
 tooltip {
-    background: rgba(43, 48, 59, 0.5);
-    border: 1px solid rgba(100, 114, 125, 0.5);
+    background: @bg-alt;
 }
+
 tooltip label {
-    color: white;
+    color: @fg-alt;
 }
 
 window#waybar {
@@ -55,21 +55,20 @@ window#waybar {
     color: #ffeded;
 }
 
-#workspaces{
+#workspaces {
     margin: 0px 8px;
-    padding: 8px 12px;
+    padding: 8px;
     border-radius: 20px;
-    border: 0px solid rgb(17, 93, 112);
     background-color: @bg;
 }
-#workspaces button{
+#workspaces button {
     margin: 0px 2px;
-    padding: 0px 2px;
+    padding: 0px 6px;
     border-radius: 12px;
     color: @bg-alt;
     background-color: @bg-alt;
 }
-#workspaces button.active{
+#workspaces button.active {
     padding: 0px 16px;
     border-radius: 12px;
     color: @fg-active;
@@ -86,16 +85,11 @@ window#waybar {
 #network{
     padding: 0px 10px 0px 14px;
     border-radius: 20px 0px 0px 20px;
-    border-top: 0px solid rgb(17, 93, 112);
-    border-bottom: 0px solid rgb(17, 93, 112);
-    border-left: 0px solid rgb(17, 93, 112);
     background-color: @bg;
 }
 #memory, #pulseaudio, #clock{
     padding: 0px 10px;
     border-radius: 0px;
-    border-top: 0px solid rgb(17, 93, 112);
-    border-bottom: 0px solid rgb(17, 93, 112);
     background-color: @bg;
 }
 
@@ -108,35 +102,23 @@ window#waybar {
     border-radius: 0px 20px 20px 0px;
     background-color: @bg;
 }
-#battery:not(.high){
-    border-top: 0px solid rgb(17, 93, 112);
-    border-bottom: 0px solid rgb(17, 93, 112);
-    border-right: 0px solid rgb(17, 93, 112);
+
+#battery.charging, #battery.plugged, #battery.full {
     color: rgb(100, 219, 183);
     background-color: #829600;
 }
-#battery.critical{
-    background-color: red;
+
+#battery.low:not(.charging) {
+    background-color: rgb(255, 85, 0);
 }
-#battery.critical:not(.charging){
+
+#battery.critical:not(.charging) {
+    background-color: red;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-
-#battery.low{
-    background-color: rgb(255, 85, 0);
-}
-#battery.charging{
-    color: rgb(100, 219, 183);
-    background-color: #829600;
-}
-#battery.high:not(.charging):not(.low):not(.critical){
-    border-top: 0px solid rgb(17, 93, 112);
-    border-bottom: 0px solid rgb(17, 93, 112);
-    border-right: 0px solid rgb(17, 93, 112);
 }
 
 /* 

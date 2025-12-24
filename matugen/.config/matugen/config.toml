@@ -18,6 +18,10 @@ contrast = 0.0
 input_path = "~/.config/matugen/templates/hypr.conf"
 output_path = "~/.config/hypr/config/colors.conf"
 
+[templates.discord]
+input_path = "~/.config/matugen/templates/midnight-discord.css"
+output_path = "~/.config/BetterDiscord/themes/matugen_midnight.theme.css"
+
 [templates.rofi]
 input_path = "~/.config/matugen/templates/rofi.rasi"
 output_path = "~/.config/rofi/colors.rasi"
@@ -36,10 +40,6 @@ post_hook = "pkill -SIGUSR1 kitty"
 input_path = "~/.config/matugen/templates/cava"
 output_path = "~/.config/cava/themes/custom"
 post_hook = "pkill -SIGUSR1 cava"
-
-[templates.btop]
-input_path = "~/.config/matugen/templates/btop.theme"
-output_path = "~/.config/btop/themes/custom.theme"
 
 [templates.pywal]
 input_path = "~/.config/matugen/templates/pywal.json"

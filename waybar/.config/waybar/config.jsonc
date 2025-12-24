@@ -5,15 +5,14 @@
     "modules-left": [
         "image#album-art",
         "custom/spotify",
-        "custom/osu",
-        "hyprland/mode"
+        "custom/osu"
     ],
     
     "image#album-art": {
         "path": "./icons/arch.png",
         "size": 20, // 40,
         "interval": 1,
-        "on-click": "rofi -show menu -modi \"menu:~/.config/rofi/powermenu.sh\" -theme \"~/.config/rofi/powermenu.rasi\""
+        "on-click": "rofi -show menu -modi \"menu:~/.config/rofi/custom/powermenu.sh\" -theme \"~/.config/rofi/custom/powermenu.rasi\""
     },
 
     "custom/spotify": {
@@ -42,16 +41,6 @@
     "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate",
-        "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "urgent": "",
-            "active": "",
-            "default": ""
-        },
         "sort-by-number": true,
         "persistent-workspaces": {
             "1": [], "2": [], "3": [], "4": []
@@ -138,23 +127,24 @@
     },
     
     "battery": {
+        "adapter": "ADP0",
+        "full-at": 100,
         "interval": 60,
         "align": 0,
         "rotate": 0,
-        "full-at": 100,
         "design-capacity": false,
         "states": {
-            "high": 75,
             "low": 30,
             "critical": 15
         },
         "format": "{icon} {capacity}",
         "format-charging": " {capacity}",
-        "format-plugged": "󱘖 {capacity}",
+        "format-plugged": " {capacity}",
         "format-full": "FULL",
         "format-icons": [
             "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
         ],
+        "on-click": "~/.config/waybar/scripts/blur_control.sh",
         "format-time": "{H}h {M}min",
         "tooltip": true,
         "tooltip-format": "{timeTo} {capacity}%"
