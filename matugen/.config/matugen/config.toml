@@ -1,17 +1,10 @@
 [config]
-# 1. reload_on_change: 
-# If true, Matugen automatically runs when you edit this config file.
+
 reload_on_change = true
 
-# 2. scheme: 
-# Determines the logic for color generation.
 # Options: "content", "expressive", "fidelity", "fruit_salad", "monochrome", "neutral", "rainbow", "tonal_spot"
-# "tonal_spot" is the default Material You look. "fidelity" keeps colors close to the image.
 scheme = "neutral"
 
-
-# 3. contrast:
-# Adjusts contrast. Use 0.0 for standard, -1.0 for lower, 1.0 for higher.
 contrast = 0.0
 
 [templates.hypr]
@@ -50,12 +43,10 @@ post_hook = "pywalfox update"
 input_path = "~/.config/matugen/templates/pywal-plain"
 output_path = "~/.cache/wal/colors"
 
-# 1. Output for Libadwaita / GTK4 (Nautilus, Settings)
-[templates.gtk4]
-input_path = "~/.config/matugen/templates/gtk.css"
-output_path = "~/.config/gtk-4.0/gtk.css"
-
-# 2. Output for Legacy GTK3
 [templates.gtk3]
 input_path = "~/.config/matugen/templates/gtk.css"
 output_path = "~/.config/gtk-3.0/gtk.css"
+
+[templates.gtk4]
+input_path = "~/.config/matugen/templates/gtk.css"
+output_path = "~/.config/gtk-4.0/gtk.css"

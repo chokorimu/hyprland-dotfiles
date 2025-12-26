@@ -13,6 +13,7 @@
         color: black;
     }
 }
+
 tooltip {
     background: @bg-alt;
 }
@@ -34,15 +35,7 @@ window#waybar {
     background-color: @bg;
 }
 
-#custom-spotify {
-    margin-left: 8px;
-    padding: 0px 12px;
-    border-radius: 20px;
-    color: @fg-alt;
-    background-color: @bg-alt;
-}
-
-#custom-osu {
+#custom-spotify, #custom-osu {
     margin-left: 8px;
     padding: 0px 12px;
     border-radius: 20px;
@@ -61,6 +54,7 @@ window#waybar {
     border-radius: 20px;
     background-color: @bg;
 }
+
 #workspaces button {
     margin: 0px 2px;
     padding: 0px 6px;
@@ -68,6 +62,7 @@ window#waybar {
     color: @bg-alt;
     background-color: @bg-alt;
 }
+
 #workspaces button.active {
     padding: 0px 16px;
     border-radius: 12px;
@@ -75,29 +70,31 @@ window#waybar {
     background-color: @bg-active;
 }
 
-#tray{
+#tray {
     margin-right: 8px;
     padding: 0px 14px;
     border-radius: 20px;
     background-color: @bg-alt;
 }
 
-#network{
+#network {
     padding: 0px 10px 0px 14px;
     border-radius: 20px 0px 0px 20px;
     background-color: @bg;
 }
-#memory, #pulseaudio, #clock{
+
+#memory, #pulseaudio, #clock {
     padding: 0px 10px;
     border-radius: 0px;
     background-color: @bg;
 }
 
-#mode {
-    background: #64727D;
+#network:hover, #memory:hover, #pulseaudio:hover, #clock:hover {
+    background-color: @bg-alt;
+    transition: background-color 0.5s ease;
 }
 
-#battery{
+#battery {
     padding: 0px 14px 0px 10px;
     border-radius: 0px 20px 20px 0px;
     background-color: @bg;
