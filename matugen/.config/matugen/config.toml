@@ -1,11 +1,7 @@
 [config]
-
 reload_on_change = true
-
-# Options: "content", "expressive", "fidelity", "fruit_salad", "monochrome", "neutral", "rainbow", "tonal_spot"
-scheme = "neutral"
-
 contrast = 0.0
+scheme = "neutral" # Options: "content", "expressive", "fidelity", "fruit_salad", "monochrome", "neutral", "rainbow", "tonal_spot"
 
 [templates.hypr]
 input_path = "~/.config/matugen/templates/hypr.conf"
