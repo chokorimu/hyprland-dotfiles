@@ -40,7 +40,7 @@ entry {
 listview {
     border: 0px;
     columns: 5;
-    lines: 2;
+    lines: 3;
     cycle: true;
     dynamic: true;
     scrollbar: false;

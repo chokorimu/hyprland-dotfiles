@@ -66,7 +66,7 @@
     },
 
     "network": {
-        "on-click": "kitty -e nmtui",
+        "on-click": "systemctl restart NetworkManager; kitty -e nmtui",
         "interface": "wlan0",
         "format": "{ifname}",
         "format-wifi": "",
