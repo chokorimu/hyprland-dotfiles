@@ -103,6 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH="$HOME/.local/bin:$PATH"
+
 # echo '               8     
 # .d88 8d8b .d8b 8d8b. 
 # 8  8 8P   8    8P Y8 
@@ -227,4 +229,3 @@ echo '⡿⣿⣟⣻⣯⣽⣷⣿⡿⣿⣿⣻⣯⣿⣿⣿⢿⣛⣿⣭⣽⣷⣶⣶�
 ⣿⣻⡏⣿⠿⠟⣉⢐⠢⡑⢌⠬⡘⢌⣵⣿⡿⠟⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠛⢋⡁⠛⣿⣿⣦⡍⠬⡑⢌⡡⠌⠺⣿⢼⣷⣿⣿
 ⣟⣯⡗⣯⠐⠢⠔⡊⠔⡡⢊⠔⣡⣾⣿⣿⣷⣮⡘⡀⢃⢼⣿⣿⣿⣿⣿⣿⣿⣿⡇⢊⠔⣈⢂⣱⣽⣿⣿⣔⠡⠒⠤⣉⢒⡈⠻⣾⣿⣿'
 }
-

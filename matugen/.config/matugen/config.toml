@@ -7,10 +7,6 @@ scheme = "neutral" # Options: "content", "expressive", "fidelity", "fruit_salad"
 input_path = "~/.config/matugen/templates/hypr.conf"
 output_path = "~/.config/hypr/config/colors.conf"
 
-[templates.discord]
-input_path = "~/.config/matugen/templates/midnight-discord.css"
-output_path = "~/.config/BetterDiscord/themes/matugen_midnight.theme.css"
-
 [templates.rofi]
 input_path = "~/.config/matugen/templates/rofi.rasi"
 output_path = "~/.config/rofi/colors.rasi"
@@ -29,20 +25,3 @@ post_hook = "pkill -SIGUSR1 kitty"
 input_path = "~/.config/matugen/templates/cava"
 output_path = "~/.config/cava/themes/custom"
 post_hook = "pkill -SIGUSR1 cava"
-
-[templates.pywal]
-input_path = "~/.config/matugen/templates/pywal.json"
-output_path = "~/.cache/wal/colors.json"
-post_hook = "pywalfox update"
-
-[templates.pywal_plain]
-input_path = "~/.config/matugen/templates/pywal-plain"
-output_path = "~/.cache/wal/colors"
-
-[templates.gtk3]
-input_path = "~/.config/matugen/templates/gtk.css"
-output_path = "~/.config/gtk-3.0/gtk.css"
-
-[templates.gtk4]
-input_path = "~/.config/matugen/templates/gtk.css"
-output_path = "~/.config/gtk-4.0/gtk.css"

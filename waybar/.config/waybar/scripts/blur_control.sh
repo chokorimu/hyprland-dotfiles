@@ -13,8 +13,8 @@ if [ "$CURRENT" == "1" ]; then
 else
     hyprctl --batch "\
         keyword decoration:blur:enabled 1;\
-        keyword decoration:active_opacity 0.85;\
-        keyword decoration:inactive_opacity 0.85"
+        keyword decoration:active_opacity 0.95;\
+        keyword decoration:inactive_opacity 0.95"
         
     notify-send -u low -t 2000 "Hyprctl Toggle" "(Blur On, Transparency On)"
 fi
