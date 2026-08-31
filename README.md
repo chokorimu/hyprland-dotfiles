@@ -1,5 +1,10 @@
 dotfiles in purpose of hyprland wm ricing
 
+dependencies:
+```
+yay -S --needed hyprland xorg-xwayland xdg-desktop-portal-hyprland hyprpolkitagent hyprlock hyprcursor waybar rofi swaync awww-git kitty google-chrome thunar pavucontrol discord elecwhat wireplumber brightnessctl playerctl opentabletdriver networkmanager grim slurp libnotify psmisc procps-ng capitaine-cursors
+```
+
 ⣿⣎⣓⣭⢎⡽⠃⠀⡀⠀⢀⠀⢀⣠⣴⣿⣟⣿⣟⣿⣟⣿⣟⣿⣟⣿⢿⣜⢿⣿⣻⣿⣻⣿⣻⣿⣻⣷⣭⡲⢄⠀⠠⢀⠀⠀⡀⠀⡷⣛⠵⣩⢞⡲⣉⡿⣿⣽⣯⣟
 ⢭⠿⣭⡎⠚⠀⠠⠐⠀⠁⣠⣴⣿⡿⣯⣷⢿⣻⣾⣟⣾⢿⡾⣟⣾⣟⣿⣻⣾⢯⣷⡿⣯⣷⢿⣳⣿⣽⣻⡿⣿⣽⣢⣀⠀⠂⠀⠄⡈⠑⢋⣦⣽⣶⣶⠶⡲⢭⣉⢖
 ⣛⢯⠓⠀⠄⡁⠂⢁⣬⣾⡿⣟⣷⣿⣻⣽⡿⡯⢳⣹⣯⣿⣟⣿⣻⣾⢿⣽⣯⣿⢯⣿⢿⣽⣿⣻⢷⣻⣏⠻⣯⣷⣿⣳⣗⣄⠁⠂⡐⠠⠀⠙⠿⣣⢎⣳⣭⡓⣮⢚

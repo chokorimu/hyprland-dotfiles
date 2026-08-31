@@ -13,10 +13,10 @@ if [ -z "$@" ]; then
     done
 else
     SELECTED_FILE="$WALL_DIR/$1"
-    swww img "$SELECTED_FILE" \
-        --transition-type $TRANSITION_TYPE \
-        --transition-duration $TRANSITION_DURATION \
-        --transition-fps 60
+    awww img "$SELECTED_FILE" 
+        # --transition-type $TRANSITION_TYPE \
+        # --transition-duration $TRANSITION_DURATION \
+        # --transition-fps 60
         
     matugen image "$SELECTED_FILE"
     notify-send "Theme Changed" "Wallpaper: $1"
