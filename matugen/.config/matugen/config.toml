@@ -4,8 +4,8 @@ contrast = 0.0
 scheme = "neutral" # Options: "content", "expressive", "fidelity", "fruit_salad", "monochrome", "neutral", "rainbow", "tonal_spot"
 
 [templates.hypr]
-input_path = "~/.config/matugen/templates/hypr.conf"
-output_path = "~/.config/hypr/config/colors.conf"
+input_path = "~/.config/matugen/templates/hypr.lua"
+output_path = "~/.config/hypr/config/colors.lua"
 
 [templates.rofi]
 input_path = "~/.config/matugen/templates/rofi.rasi"

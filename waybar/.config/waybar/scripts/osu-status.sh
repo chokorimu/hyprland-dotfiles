@@ -10,7 +10,7 @@ if [[ "$CLASS" =~ "osu" ]]; then
     
     if [ "$CLEAN_TITLE" = "osu!" ]; then
         jq -n --unbuffered --compact-output \
-            --arg text " Selecting a beatmap..." \
+            --arg text "Selecting a beatmap" \
             --arg class "selecting" \
             '{text: $text, class: $class}'
     else

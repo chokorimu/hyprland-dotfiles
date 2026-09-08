@@ -23,9 +23,9 @@ tooltip label {
 }
 
 window#waybar {
-    border-radius: 12px;
+    border-radius: 0px;
     color: @fg;
-    background: rgba(24, 39, 49, 0);
+    background: @bg;
 }
 
 #image {
@@ -35,12 +35,18 @@ window#waybar {
     background-color: @bg;
 }
 
-#custom-spotify, #custom-osu {
-    margin-left: 8px;
-    padding: 0px 12px;
-    border-radius: 20px;
-    color: @fg-alt;
-    background-color: @bg-alt;
+#custom-spotify, #custom-osu, #custom-cava {
+    margin-left: 0px;
+    padding: 0px 10px;
+    border-radius: 0px;
+    color: @fg;
+    background-color: @bg;
+}
+
+#custom-cava.empty {
+    padding: 0;
+    margin: 0;
+    background: transparent;
 }
 
 #custom-osu.selecting, #custom-osu.playing {
@@ -57,23 +63,22 @@ window#waybar {
 
 #workspaces button {
     margin: 0px 2px;
-    padding: 0px 6px;
-    border-radius: 12px;
+    padding: 0px 0px;
+    border-radius: 4px;
     color: @bg-alt;
     background-color: @bg-alt;
 }
 
 #workspaces button.active {
-    padding: 0px 16px;
-    border-radius: 12px;
+    padding: 0px 12px;
+    border-radius: 4px;
     color: @fg-active;
     background-color: @bg-active;
 }
 
 #tray {
-    margin-right: 8px;
     padding: 0px 14px;
-    border-radius: 20px;
+    border-radius: 0px;
     background-color: @bg-alt;
 }
 
@@ -95,8 +100,8 @@ window#waybar {
 }
 
 #battery {
-    padding: 0px 14px 0px 10px;
-    border-radius: 0px 20px 20px 0px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 0px;
     background-color: @bg;
 }
 
