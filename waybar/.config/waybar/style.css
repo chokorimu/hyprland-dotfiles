@@ -84,7 +84,7 @@ window#waybar {
 
 #network {
     padding: 0px 10px 0px 14px;
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 0px 0px 0px 0px;
     background-color: @bg;
 }
 
