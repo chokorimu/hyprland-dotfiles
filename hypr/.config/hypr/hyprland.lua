@@ -9,9 +9,9 @@ require("keybinds")
 
 hl.monitor({
     output   = "",
-    mode     = "2560x1600@165",
+    mode     = "highres",
     position = "auto",
-    scale    = "1.60",
+    scale    = "auto",
 })
 
 -- hl.monitor({
