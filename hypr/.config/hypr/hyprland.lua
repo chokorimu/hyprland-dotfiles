@@ -27,7 +27,7 @@ hl.env("XCURSOR_SIZE", "32")
 hl.env("HYPRCURSOR_SIZE", "32")
 hl.env("HYPRCURSOR_THEME", "capitaine-cursors-light")
 
--- nvidia
+-- nvidia (drop these two lines on non-nvidia systems)
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 
