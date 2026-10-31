@@ -75,7 +75,7 @@
     },
 
     "network": {
-        "on-click": "systemctl restart NetworkManager; kitty -e nmtui",
+        "on-click": "kitty -e impala",
         "interface": "wlan0",
         "format": "{ifname}",
         "format-wifi": "",
@@ -148,9 +148,9 @@
             "low": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}",
-        "format-charging": " {capacity}",
-        "format-plugged": " {capacity}",
+        "format": "{icon} {capacity}%",
+        "format-charging": "{capacity}%",
+        "format-plugged": "{capacity}%",
         "format-full": "FULL",
         "format-icons": [
             "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"

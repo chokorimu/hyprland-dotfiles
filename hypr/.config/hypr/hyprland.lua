@@ -9,9 +9,9 @@ require("keybinds")
 
 hl.monitor({
     output   = "",
-    mode     = "highres",
-    position = "auto",
-    scale    = "auto",
+    mode     = "highres", -- 2560x1600@165
+    position = "auto",    -- 0x0
+    scale    = "auto",    -- 1.6
 })
 
 -- hl.monitor({
@@ -35,21 +35,22 @@ hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 ----  LAYOUT  ----
 ------------------
 
+
 hl.config({
+    general = {
+        layout = "dwindle",
+    },
+
+    scrolling = {
+        fullscreen_on_one_column = true,
+    },
+
     dwindle = {
         preserve_split = true, -- You probably want this
     },
-})
 
-hl.config({
     master = {
         new_status = "master",
-    },
-})
-
-hl.config({
-    scrolling = {
-        fullscreen_on_one_column = true,
     },
 })
 
@@ -81,7 +82,9 @@ hl.config({
 
         touchpad = {
             natural_scroll = true,
+            disable_while_typing = false
         },
+
     },
 
     binds = {
@@ -119,6 +122,12 @@ hl.device({
     sensitivity = -0.4,
 })
 
+hl.config({
+    xwayland = {
+        force_zero_scaling = true
+    }
+})
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
@@ -153,13 +162,19 @@ hl.window_rule({
     match = { class = "hyprland-run" },
 
     move  = "20 monitor_h-120",
-    float = true,
+    float = true
 })
 
 hl.window_rule({
     name = "discord",
     match = { class = "discord" },
     workspace = "special:1 silent"
+})
+
+hl.window_rule({
+    name = "impala",
+    match = { class = "kitty:impala" },
+    float = true 
 })
 
 -----------------------

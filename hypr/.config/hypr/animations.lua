@@ -2,7 +2,13 @@
 ---- ANIMATIONS ----
 --------------------
 
--- Curve definitions (from original bezier configurations)
+hl.config({
+    animations = {
+        enabled = true,
+    }
+})
+
+-- Curve definitions
 hl.curve("cool_shit",    { type = "bezier", points = {{0.3, 1.2}, {0.3, 1}} })
 hl.curve("linear_steep", { type = "bezier", points = {{0.5, 0.5}, {0.75, 1}} });
 -- hl.curve("easy",      { type = "spring", mass = 1, stiffness = 238.1191, damping = 24.21279333 })

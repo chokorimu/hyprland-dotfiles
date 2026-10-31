@@ -4,8 +4,6 @@
 
 hl.config({
     general = {
-        layout = "dwindle",
-
         gaps_in         = 6,
         gaps_out        = 12,
         gaps_workspaces = -12, 
@@ -34,16 +32,12 @@ hl.config({
 
         blur = {
             enabled    = true,
-            size       = 8,
-            passes     = 4,
+            size       = 20,
+            passes     = 2,
             vibrancy   = 0,
             noise      = 0.2,
             brightness = 1,
             contrast   = 1,
-        },
-    },
-
-    animations = {
-        enabled = true,
+        }
     },
 })
